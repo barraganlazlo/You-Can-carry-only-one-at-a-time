@@ -23,7 +23,7 @@ animations = [ {
 "speed": 14.0
 } ]
 
-[node name="AnimatedSprite" type="AnimatedSprite"]
+[node name="Tree" type="AnimatedSprite"]
 frames = SubResource( 1 )
-frame = 11
+frame = 3
 playing = true
