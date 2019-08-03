@@ -1,0 +1,79 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scenes/AnimatedWater.tscn" type="PackedScene" id=1]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2( 640, 640 )
+
+[node name="River" type="Node2D" parent="."]
+editor/display_folded = true
+position = Vector2( 0, -208 )
+
+[node name="AnimatedWater" parent="River" instance=ExtResource( 1 )]
+position = Vector2( -80, 20 )
+rotation = 1.5708
+frame = 9
+offset = Vector2( -20, -112 )
+
+[node name="AnimatedWater3" parent="River" instance=ExtResource( 1 )]
+position = Vector2( -80, 84 )
+rotation = 1.5708
+animation = "water2"
+frame = 2
+offset = Vector2( -20, -112 )
+
+[node name="AnimatedWater6" parent="River" instance=ExtResource( 1 )]
+position = Vector2( -80, 148 )
+rotation = 1.5708
+animation = "water2"
+frame = 1
+offset = Vector2( -20, -112 )
+
+[node name="AnimatedWater8" parent="River" instance=ExtResource( 1 )]
+position = Vector2( -80, 212 )
+rotation = 1.5708
+animation = "water2"
+frame = 1
+offset = Vector2( -20, -112 )
+
+[node name="AnimatedWater10" parent="River" instance=ExtResource( 1 )]
+position = Vector2( -80, 276 )
+rotation = 1.5708
+animation = "water2"
+frame = 1
+offset = Vector2( -20, -112 )
+
+[node name="AnimatedWater2" parent="River" instance=ExtResource( 1 )]
+position = Vector2( -80, 20 )
+rotation = 1.5708
+animation = "water3"
+frame = 4
+offset = Vector2( -20, -48 )
+
+[node name="AnimatedWater4" parent="River" instance=ExtResource( 1 )]
+position = Vector2( -80, 84 )
+rotation = 1.5708
+animation = "water1"
+frame = 12
+offset = Vector2( -20, -48 )
+
+[node name="AnimatedWater5" parent="River" instance=ExtResource( 1 )]
+position = Vector2( -80, 148 )
+rotation = 1.5708
+animation = "water1"
+frame = 11
+offset = Vector2( -20, -48 )
+
+[node name="AnimatedWater7" parent="River" instance=ExtResource( 1 )]
+position = Vector2( -80, 212 )
+rotation = 1.5708
+animation = "water1"
+frame = 11
+offset = Vector2( -20, -48 )
+
+[node name="AnimatedWater9" parent="River" instance=ExtResource( 1 )]
+position = Vector2( -80, 276 )
+rotation = 1.5708
+animation = "water1"
+frame = 11
+offset = Vector2( -20, -48 )
