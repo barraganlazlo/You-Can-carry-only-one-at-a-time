@@ -8,7 +8,7 @@ extents = Vector2( 16, 16 )
 
 [node name="Item" type="Area2D"]
 position = Vector2( 377.496, -208 )
-scale = Vector2( 1.5, 1.5 )
+scale = Vector2( 0.9, 0.9 )
 script = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -16,4 +16,7 @@ shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 2 )
-[connection signal="input_event" from="." to="." method="_on_Item_input_event"]
+
+[node name="Tween" type="Tween" parent="."]
+[connection signal="area_entered" from="." to="." method="_area_entered"]
+[connection signal="area_exited" from="." to="." method="_area_exited"]

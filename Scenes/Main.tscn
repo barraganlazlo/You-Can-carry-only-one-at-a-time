@@ -1,12 +1,11 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Scenes/Boat.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/AnimatedWater.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/AnimatedTree.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Sprites/Johans Wooden Fence.png" type="Texture" id=4]
-[ext_resource path="res://Sprites/border.png" type="Texture" id=5]
-[ext_resource path="res://Sprites/items/sheep.png" type="Texture" id=6]
-[ext_resource path="res://Scenes/Item.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Slot.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Item.tscn" type="PackedScene" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 220, 60 )
@@ -22,9 +21,6 @@ extents = Vector2( 220, 60 )
 1/navigation_offset = Vector2( 0, 0 )
 1/shapes = [  ]
 1/z_index = 0
-
-[sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 16, 16 )
 
 [node name="Main" type="Node2D"]
 position = Vector2( 640, 640 )
@@ -45,88 +41,90 @@ shape = SubResource( 1 )
 [node name="AnimatedWater" parent="River" instance=ExtResource( 2 )]
 position = Vector2( 170, -80.0001 )
 rotation = -3.14159
-frame = 9
+frame = 1
 offset = Vector2( -20, -112 )
 
 [node name="AnimatedWater3" parent="River" instance=ExtResource( 2 )]
 position = Vector2( 106, -80.0003 )
 rotation = -3.14159
 animation = "water2"
-frame = 3
+frame = 9
 offset = Vector2( -20, -112 )
 
 [node name="AnimatedWater6" parent="River" instance=ExtResource( 2 )]
 position = Vector2( 42.0003, -80.0005 )
 rotation = -3.14159
 animation = "water2"
-frame = 3
+frame = 9
 offset = Vector2( -20, -112 )
 
 [node name="AnimatedWater8" parent="River" instance=ExtResource( 2 )]
 position = Vector2( -21.9997, -80.0008 )
 rotation = -3.14159
 animation = "water2"
-frame = 3
+frame = 9
 offset = Vector2( -20, -112 )
 
 [node name="AnimatedWater10" parent="River" instance=ExtResource( 2 )]
 position = Vector2( -85.9998, -80.001 )
 rotation = -3.14159
 animation = "water2"
-frame = 3
+frame = 9
 offset = Vector2( -20, -112 )
 
 [node name="AnimatedWater12" parent="River" instance=ExtResource( 2 )]
 position = Vector2( -150, -80.0012 )
 rotation = -3.14159
 animation = "water2"
-frame = 1
+frame = 7
 offset = Vector2( -20, -112 )
 
 [node name="AnimatedWater13" parent="River" instance=ExtResource( 2 )]
 position = Vector2( -166, -80.0013 )
 rotation = -7.23998e-006
 scale = Vector2( 1, -1 )
-frame = 9
+frame = 1
 offset = Vector2( -20, -112 )
 
 [node name="AnimatedWater2" parent="River" instance=ExtResource( 2 )]
 position = Vector2( 170, -80.0001 )
 rotation = -3.14159
 animation = "water3"
-frame = 7
 offset = Vector2( -20, -48 )
 
 [node name="AnimatedWater4" parent="River" instance=ExtResource( 2 )]
 position = Vector2( 106, -80.0003 )
 rotation = -3.14159
 animation = "water1"
-frame = 1
+frame = 7
 offset = Vector2( -20, -48 )
 
 [node name="AnimatedWater5" parent="River" instance=ExtResource( 2 )]
 position = Vector2( 42.0003, -80.0005 )
 rotation = -3.14159
 animation = "water1"
+frame = 6
 offset = Vector2( -20, -48 )
 
 [node name="AnimatedWater7" parent="River" instance=ExtResource( 2 )]
 position = Vector2( -21.9997, -80.0008 )
 rotation = -3.14159
 animation = "water1"
+frame = 6
 offset = Vector2( -20, -48 )
 
 [node name="AnimatedWater9" parent="River" instance=ExtResource( 2 )]
 position = Vector2( -85.9998, -80.001 )
 rotation = -3.14159
 animation = "water1"
+frame = 6
 offset = Vector2( -20, -48 )
 
 [node name="AnimatedWater11" parent="River" instance=ExtResource( 2 )]
 position = Vector2( -150, -80.0012 )
 rotation = -3.14159
 animation = "water1"
-frame = 11
+frame = 4
 offset = Vector2( -20, -48 )
 
 [node name="AnimatedWater14" parent="River" instance=ExtResource( 2 )]
@@ -134,6 +132,7 @@ position = Vector2( -166, -80.0013 )
 rotation = -7.23998e-006
 scale = Vector2( 1, -1 )
 animation = "water3"
+frame = 6
 offset = Vector2( -20, -48 )
 
 [node name="Decoration" type="Node2D" parent="."]
@@ -141,23 +140,21 @@ editor/display_folded = true
 
 [node name="Tree" parent="Decoration" instance=ExtResource( 3 )]
 position = Vector2( 263.13, -130.127 )
-frame = 13
+frame = 5
 
 [node name="Tree2" parent="Decoration" instance=ExtResource( 3 )]
 position = Vector2( -96.8704, -43.2109 )
-frame = 12
+frame = 4
 
 [node name="Tree3" parent="Decoration" instance=ExtResource( 3 )]
 position = Vector2( -412.66, -122.759 )
-frame = 11
 
 [node name="Tree4" parent="Decoration" instance=ExtResource( 3 )]
 position = Vector2( -316.871, -335.391 )
-frame = 11
 
 [node name="Tree5" parent="Decoration" instance=ExtResource( 3 )]
 position = Vector2( 236.551, -396.022 )
-frame = 10
+frame = 2
 
 [node name="TileMap" type="TileMap" parent="Decoration"]
 tile_set = SubResource( 2 )
@@ -165,35 +162,11 @@ cell_size = Vector2( 32, 32 )
 format = 1
 tile_data = PoolIntArray( -1507328, 1, 0, -1441792, 1, 0, -1376256, 1, 0, -1310720, 1, 0, -1245184, 1, 0, -1179648, 1, 0, -1114112, 1, 0, -1048576, 1, 0, -983040, 1, 0, -917504, 1, 0, -851968, 1, 0, -786432, 1, 0, -720896, 1, 0, -655360, 1, 0, -327680, 1, 0, -262144, 1, 0, -196608, 1, 0, -131072, 1, 0, -65536, 1, 0, 0, 1, 0, 65536, 1, 0, 131072, 1, 0, 196608, 1, 0 )
 
-[node name="Slot" type="Area2D" parent="."]
+[node name="RightSlots" type="Node2D" parent="."]
+
+[node name="Slot" parent="RightSlots" instance=ExtResource( 5 )]
 editor/display_folded = true
-position = Vector2( 280, -208 )
-scale = Vector2( 1.5, 1.5 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Slot"]
-shape = SubResource( 3 )
-
-[node name="Sprite" type="Sprite" parent="Slot"]
-texture = ExtResource( 5 )
-
-[node name="sheep" type="Sprite" parent="Slot"]
-scale = Vector2( 0.9, 0.9 )
-texture = ExtResource( 6 )
-
-[node name="Slot2" type="Area2D" parent="."]
-editor/display_folded = true
-position = Vector2( 328.748, -208 )
-scale = Vector2( 1.5, 1.5 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Slot2"]
-shape = SubResource( 3 )
-
-[node name="Sprite" type="Sprite" parent="Slot2"]
-texture = ExtResource( 5 )
-
-[node name="sheep" type="Sprite" parent="Slot2"]
-scale = Vector2( 0.9, 0.9 )
-texture = ExtResource( 6 )
-
-[node name="Slot3" parent="." instance=ExtResource( 7 )]
+[node name="Item" parent="RightSlots/Slot" instance=ExtResource( 6 )]
+position = Vector2( 0, 0 )
 [connection signal="input_event" from="River" to="Boat" method="_on_River_input_event"]
