@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Scripts/boat.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/Boat.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/boat.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/Slot.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scripts/BoatSlot.gd" type="Script" id=4]
 
 [node name="Boat" type="Node2D"]
 script = ExtResource( 1 )
@@ -13,4 +15,7 @@ z_index = 1
 texture = ExtResource( 2 )
 
 [node name="Tween" type="Tween" parent="."]
+
+[node name="Slot" parent="." instance=ExtResource( 3 )]
+script = ExtResource( 4 )
 [connection signal="tween_completed" from="Tween" to="." method="_on_Tween_tween_completed"]

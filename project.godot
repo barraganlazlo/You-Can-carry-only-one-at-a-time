@@ -8,9 +8,20 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "Object",
+"class": "ItemClass",
+"language": "GDScript",
+"path": "res://Scripts/ItemClass.gd"
+}, {
+"base": "Object",
+"class": "Level",
+"language": "GDScript",
+"path": "res://Scripts/Level.gd"
+} ]
 _global_script_class_icons={
-
+"ItemClass": "",
+"Level": ""
 }
 
 [application]
@@ -19,12 +30,15 @@ config/name="you can carry only one at a time"
 run/main_scene="res://Scenes/Main.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+ItemManager="*res://Scripts/ItemManager.gd"
+
 [display]
 
 window/size/width=1280
 window/size/height=720
-window/size/borderless=true
-window/size/fullscreen=true
+window/size/resizable=false
 window/vsync/use_vsync=false
 window/per_pixel_transparency/allowed=true
 window/per_pixel_transparency/enabled=true

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/wolf-head.png-b62c60a9a512b9cca18ba6f0d6187efc.stex"
+path="res://.import/Wolf.png-b6f2052544eec8b8a2d318fb988a35b7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/items/wolf-head.png"
-dest_files=[ "res://.import/wolf-head.png-b62c60a9a512b9cca18ba6f0d6187efc.stex" ]
+source_file="res://Sprites/Items/Wolf.png"
+dest_files=[ "res://.import/Wolf.png-b6f2052544eec8b8a2d318fb988a35b7.stex" ]
 
 [params]
 
