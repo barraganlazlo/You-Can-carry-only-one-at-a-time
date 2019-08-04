@@ -43,90 +43,91 @@ shape = SubResource( 1 )
 [node name="AnimatedWater" parent="River" instance=ExtResource( 2 )]
 position = Vector2( 170, -80.0001 )
 rotation = -3.14159
-frame = 0
+frame = 1
 offset = Vector2( -20, -112 )
 
 [node name="AnimatedWater3" parent="River" instance=ExtResource( 2 )]
 position = Vector2( 106, -80.0003 )
 rotation = -3.14159
 animation = "water2"
-frame = 10
+frame = 11
 offset = Vector2( -20, -112 )
 
 [node name="AnimatedWater6" parent="River" instance=ExtResource( 2 )]
 position = Vector2( 42.0003, -80.0005 )
 rotation = -3.14159
 animation = "water2"
-frame = 10
+frame = 11
 offset = Vector2( -20, -112 )
 
 [node name="AnimatedWater8" parent="River" instance=ExtResource( 2 )]
 position = Vector2( -21.9997, -80.0008 )
 rotation = -3.14159
 animation = "water2"
-frame = 10
+frame = 11
 offset = Vector2( -20, -112 )
 
 [node name="AnimatedWater10" parent="River" instance=ExtResource( 2 )]
 position = Vector2( -85.9998, -80.001 )
 rotation = -3.14159
 animation = "water2"
-frame = 10
+frame = 11
 offset = Vector2( -20, -112 )
 
 [node name="AnimatedWater12" parent="River" instance=ExtResource( 2 )]
 position = Vector2( -150, -80.0012 )
 rotation = -3.14159
 animation = "water2"
-frame = 7
+frame = 8
 offset = Vector2( -20, -112 )
 
 [node name="AnimatedWater13" parent="River" instance=ExtResource( 2 )]
 position = Vector2( -166, -80.0013 )
 rotation = -7.23998e-006
 scale = Vector2( 1, -1 )
-frame = 0
+frame = 1
 offset = Vector2( -20, -112 )
 
 [node name="AnimatedWater2" parent="River" instance=ExtResource( 2 )]
 position = Vector2( 170, -80.0001 )
 rotation = -3.14159
 animation = "water3"
+frame = 0
 offset = Vector2( -20, -48 )
 
 [node name="AnimatedWater4" parent="River" instance=ExtResource( 2 )]
 position = Vector2( 106, -80.0003 )
 rotation = -3.14159
 animation = "water1"
-frame = 7
+frame = 8
 offset = Vector2( -20, -48 )
 
 [node name="AnimatedWater5" parent="River" instance=ExtResource( 2 )]
 position = Vector2( 42.0003, -80.0005 )
 rotation = -3.14159
 animation = "water1"
-frame = 7
+frame = 8
 offset = Vector2( -20, -48 )
 
 [node name="AnimatedWater7" parent="River" instance=ExtResource( 2 )]
 position = Vector2( -21.9997, -80.0008 )
 rotation = -3.14159
 animation = "water1"
-frame = 7
+frame = 8
 offset = Vector2( -20, -48 )
 
 [node name="AnimatedWater9" parent="River" instance=ExtResource( 2 )]
 position = Vector2( -85.9998, -80.001 )
 rotation = -3.14159
 animation = "water1"
-frame = 7
+frame = 8
 offset = Vector2( -20, -48 )
 
 [node name="AnimatedWater11" parent="River" instance=ExtResource( 2 )]
 position = Vector2( -150, -80.0012 )
 rotation = -3.14159
 animation = "water1"
-frame = 7
+frame = 8
 offset = Vector2( -20, -48 )
 
 [node name="AnimatedWater14" parent="River" instance=ExtResource( 2 )]
@@ -134,7 +135,7 @@ position = Vector2( -166, -80.0013 )
 rotation = -7.23998e-006
 scale = Vector2( 1, -1 )
 animation = "water3"
-frame = 7
+frame = 8
 offset = Vector2( -20, -48 )
 
 [node name="horizontal-flip" type="Sprite" parent="River"]
@@ -145,22 +146,21 @@ editor/display_folded = true
 
 [node name="Tree" parent="Decoration" instance=ExtResource( 4 )]
 position = Vector2( 263.13, -130.127 )
-frame = 4
+frame = 5
 
 [node name="Tree2" parent="Decoration" instance=ExtResource( 4 )]
 position = Vector2( -96.8704, -43.2109 )
+frame = 4
 
 [node name="Tree3" parent="Decoration" instance=ExtResource( 4 )]
 position = Vector2( -412.66, -122.759 )
-frame = 2
 
 [node name="Tree4" parent="Decoration" instance=ExtResource( 4 )]
 position = Vector2( -316.871, -335.391 )
-frame = 2
 
 [node name="Tree5" parent="Decoration" instance=ExtResource( 4 )]
 position = Vector2( 236.551, -396.022 )
-frame = 1
+frame = 2
 
 [node name="TileMap" type="TileMap" parent="Decoration"]
 tile_set = SubResource( 2 )
