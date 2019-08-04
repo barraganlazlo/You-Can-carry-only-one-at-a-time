@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Fonts/new_dynamicfont.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Fonts/big.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Sprites/next_level.png" type="Texture" id=2]
 [ext_resource path="res://Scripts/LoadNextLevel.gd" type="Script" id=3]
 

@@ -1,16 +1,112 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://Fonts/low.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Fonts/big.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Fonts/medium.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Sprites/Twitter.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/itchio.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/YouTube.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/quit.png" type="Texture" id=6]
+[ext_resource path="res://Scripts/MainMenu.gd" type="Script" id=7]
 
-[node name="Credits" type="Control"]
-margin_right = 40.0
-margin_bottom = 40.0
+[node name="Credits" type="VBoxContainer"]
+margin_left = 25.0
+margin_right = 1255.0
+margin_bottom = 500.0
+custom_constants/separation = 60
+
+[node name="Control" type="Control" parent="."]
+margin_right = 1230.0
+
+[node name="Label" type="Label" parent="."]
+margin_top = 60.0
+margin_right = 1230.0
+margin_bottom = 122.0
+custom_fonts/font = ExtResource( 1 )
+text = "You can only carry one thing at a time"
+align = 1
+valign = 1
 
 [node name="Lazlo" type="Label" parent="."]
-margin_top = 520.0
-margin_right = 1280.0
-margin_bottom = 620.0
-custom_fonts/font = ExtResource( 1 )
+margin_top = 182.0
+margin_right = 1230.0
+margin_bottom = 225.0
+custom_fonts/font = ExtResource( 2 )
 text = "A Game By Lazlo Barragan"
 align = 1
 valign = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+editor/display_folded = true
+margin_top = 285.0
+margin_right = 1230.0
+margin_bottom = 328.0
+custom_constants/separation = 20
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer"]
+margin_right = 40.0
+margin_bottom = 43.0
+rect_min_size = Vector2( 40, 40 )
+texture = ExtResource( 3 )
+expand = true
+
+[node name="Label" type="Label" parent="HBoxContainer"]
+margin_left = 60.0
+margin_right = 242.0
+margin_bottom = 43.0
+custom_fonts/font = ExtResource( 2 )
+text = "@LazloBarragan"
+
+[node name="TextureRect2" type="TextureRect" parent="HBoxContainer"]
+margin_left = 262.0
+margin_right = 302.0
+margin_bottom = 43.0
+rect_min_size = Vector2( 40, 40 )
+texture = ExtResource( 4 )
+expand = true
+
+[node name="Label2" type="Label" parent="HBoxContainer"]
+margin_left = 322.0
+margin_right = 572.0
+margin_bottom = 43.0
+custom_fonts/font = ExtResource( 2 )
+text = "lazlobarragan.itch.io"
+
+[node name="TextureRect3" type="TextureRect" parent="HBoxContainer"]
+margin_left = 592.0
+margin_right = 632.0
+margin_bottom = 43.0
+rect_min_size = Vector2( 40, 40 )
+texture = ExtResource( 5 )
+expand = true
+
+[node name="Label3" type="Label" parent="HBoxContainer"]
+margin_left = 652.0
+margin_right = 1223.0
+margin_bottom = 43.0
+custom_fonts/font = ExtResource( 2 )
+text = "youtube.com/channel/UCS7Ip_zMg5uwqhQqvJUnrug"
+
+[node name="Label3" type="Label" parent="."]
+margin_top = 388.0
+margin_right = 1230.0
+margin_bottom = 431.0
+custom_fonts/font = ExtResource( 2 )
+text = "Graphics : itch.io/profile/guttykreum       opengameart.org/users/looneybits        game-icons.net"
+
+[node name="Label2" type="Label" parent="."]
+margin_top = 491.0
+margin_right = 1230.0
+margin_bottom = 534.0
+custom_fonts/font = ExtResource( 2 )
+text = "Fonts : 1001freefonts.com/komika-poster.font"
+
+[node name="Button" type="Button" parent="."]
+margin_top = 594.0
+margin_right = 1230.0
+margin_bottom = 664.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_pivot_offset = Vector2( 40, 40 )
+icon = ExtResource( 6 )
+flat = true
+script = ExtResource( 7 )

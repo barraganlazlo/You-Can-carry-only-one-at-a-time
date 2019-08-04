@@ -3,13 +3,12 @@
 [ext_resource path="res://Scripts/ItemScript.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Items/Wolf.png" type="Texture" id=2]
 
-
-
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 16, 16 )
 
 [node name="Item" type="Area2D"]
 scale = Vector2( 0.9, 0.9 )
+z_index = 1
 script = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -19,3 +18,5 @@ shape = SubResource( 1 )
 texture = ExtResource( 2 )
 [connection signal="area_entered" from="." to="." method="_area_entered"]
 [connection signal="area_exited" from="." to="." method="_area_exited"]
+[connection signal="mouse_entered" from="." to="." method="_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_mouse_exited"]
