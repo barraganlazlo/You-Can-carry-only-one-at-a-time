@@ -1,6 +1,7 @@
 extends Node
 
 var rightside=true
-enum ItemType{Sheep, Wolf, Laitue, Dog  }
+enum ItemType{Chicken, Wolf, Snake, Dog, Crocodile, Fish}
 var typeCount=3
+var boat
 

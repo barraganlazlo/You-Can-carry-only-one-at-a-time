@@ -21,11 +21,9 @@ func _input_event(viewport, event, shape_idx):
 	if (event is InputEventMouseButton):
 		if(event.pressed and current_slot.is_right_side()==ItemManager.rightside):
 			follow=true
-			print("side : " )
-			print(current_slot.is_right_side())
+			print(str("side : ",current_slot.is_right_side()))
 		else:
 			if(slot_over):
-				print(slot_over.name)
 				put_in_slot(slot_over)
 			follow=false
 			position= Vector2.ZERO
@@ -45,4 +43,6 @@ func put_in_slot(slot):
 	current_slot.on_remove(self,slot)
 	current_slot=slot
 	slot.on_add(self)
+	if(ItemManager.boat.LeftSlots.check_win()):
+		LevelManager.win()
 

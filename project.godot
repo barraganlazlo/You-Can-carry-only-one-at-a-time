@@ -8,25 +8,21 @@
 
 config_version=4
 
-_global_script_classes=[ {
-"base": "Object",
-"class": "Level",
-"language": "GDScript",
-"path": "res://Scripts/Level.gd"
-} ]
+_global_script_classes=[  ]
 _global_script_class_icons={
-"Level": ""
+
 }
 
 [application]
 
 config/name="you can carry only one at a time"
-run/main_scene="res://Scenes/Main.tscn"
-config/icon="res://icon.png"
+run/main_scene="res://Scenes/Menu.tscn"
+config/icon="res://Sprites/boat.png"
 
 [autoload]
 
 ItemManager="*res://Scripts/ItemManager.gd"
+LevelManager="*res://Scripts/LevelManager.gd"
 
 [display]
 

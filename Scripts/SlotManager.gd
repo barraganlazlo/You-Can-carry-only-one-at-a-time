@@ -4,27 +4,65 @@ export(bool) var rightside=true
 var slots
 var items= []
 var to_delete=[]
-var to_combine=[]
-var to_protect=[]
-
+var fish_turn=false
+var wolf_turn=false
 func _ready():
 	slots=get_children()
+	fish_turn=false
+	wolf_turn=false
 	for type in ItemManager.ItemType :
 		items.append(0)
 
 func check():
 	count_items()
 	print(items)
-	if(items[ItemManager.ItemType.Sheep]>0 and items[ItemManager.ItemType.Laitue]>0):
-		print("y")
-		for i in range(min(items[ItemManager.ItemType.Sheep],items[ItemManager.ItemType.Laitue])):
-			print(i)
-			delete(ItemManager.ItemType.Laitue)
-	if(items[ItemManager.ItemType.Wolf] - items[ItemManager.ItemType.Dog]>0 and items[ItemManager.ItemType.Sheep]>0):
-		for i in range(min(items[ItemManager.ItemType.Wolf],items[ItemManager.ItemType.Sheep])):
-			delete(ItemManager.ItemType.Sheep)
+	# Chicken eat Snake
+	if(items[ItemManager.ItemType.Chicken]>0 and items[ItemManager.ItemType.Snake]>0):
+		for i in range(min(items[ItemManager.ItemType.Chicken],items[ItemManager.ItemType.Snake])):
+			delete(ItemManager.ItemType.Snake)
+	# Wolf eat Chicken Dog protect Chicken
+	if(items[ItemManager.ItemType.Wolf] - items[ItemManager.ItemType.Dog]>0 and items[ItemManager.ItemType.Chicken]>0):
+		for i in range(min(items[ItemManager.ItemType.Wolf],items[ItemManager.ItemType.Chicken])):
+			delete(ItemManager.ItemType.Chicken)
+	# Snake eat Dog
+	if(items[ItemManager.ItemType.Snake]>0 and items[ItemManager.ItemType.Dog]>0):
+		for i in range(min(items[ItemManager.ItemType.Snake],items[ItemManager.ItemType.Dog])):
+			delete(ItemManager.ItemType.Dog)
+	#Crocodile eat fish 2 turn 
+	if(items[ItemManager.ItemType.Crocodile]>0):
+		if(items[ItemManager.ItemType.Fish]>0):
+			if(fish_turn):
+				for i in range(min(items[ItemManager.ItemType.Crocodile],items[ItemManager.ItemType.Fish])):
+					delete(ItemManager.ItemType.Fish)
+			else:
+				fish_turn=true
+		else:
+			fish_turn=false
+		if(items[ItemManager.ItemType.Wolf]):
+			if(wolf_turn):
+				for i in range(min(items[ItemManager.ItemType.Crocodile],items[ItemManager.ItemType.Wolf])):
+					delete(ItemManager.ItemType.Wolf)
+			else:
+				wolf_turn=true
+		else:
+			wolf_turn=false
+	else:
+		fish_turn=false
+		wolf_turn=false
 	delete_to_delete()
 
+func check_win():
+	count_items()
+	print("checkwin : ")
+	print(str("level : ",LevelManager.current_level))
+	print(str("items :",items))
+	print(str("win :",LevelManager.levels[LevelManager.current_level]))
+	var type=0
+	for i in LevelManager.levels[LevelManager.current_level]:
+		if(items[type]<i):
+			return
+		type+=1
+	LevelManager.win()
 
 func delete(type):
 	for slot in slots:

@@ -1,0 +1,46 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Fonts/new_dynamicfont.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Sprites/next_level.png" type="Texture" id=2]
+[ext_resource path="res://Scripts/LoadNextLevel.gd" type="Script" id=3]
+
+[node name="WinScreen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Panel" type="Panel" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -300.0
+margin_top = -152.0
+margin_right = 300.0
+margin_bottom = 108.0
+
+[node name="Label" type="Label" parent="Panel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -120.0
+margin_top = -40.0
+margin_right = 127.0
+margin_bottom = 40.0
+custom_fonts/font = ExtResource( 1 )
+text = "Level Completed"
+align = 1
+valign = 1
+
+[node name="Next level" type="Button" parent="Panel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 208.0
+margin_top = 45.0
+margin_right = 288.0
+margin_bottom = 125.0
+icon = ExtResource( 2 )
+flat = true
+script = ExtResource( 3 )

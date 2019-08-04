@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Wolf.png-b6f2052544eec8b8a2d318fb988a35b7.stex"
+path="res://.import/quit.png-a3dd195c30c3a510bf388b31f45c8e1e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Items/Wolf.png"
-dest_files=[ "res://.import/Wolf.png-b6f2052544eec8b8a2d318fb988a35b7.stex" ]
+source_file="res://Sprites/quit.png"
+dest_files=[ "res://.import/quit.png-a3dd195c30c3a510bf388b31f45c8e1e.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

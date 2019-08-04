@@ -11,6 +11,7 @@ var moving=false;
 func _ready():
 	position.x=Xposition1
 	ItemManager.rightside=true
+	ItemManager.boat=self
 func switch_position():
 	if(moving):
 		return
@@ -24,12 +25,12 @@ func switch_position():
 		LeftSlots.check()
 	TweenNode.interpolate_property(self,"position:x",position.x,pos,timeToTravel,Tween.TRANS_SINE,Tween.EASE_IN_OUT)
 	TweenNode.start()
-	ItemManager.rightside=!ItemManager.rightside
+	ItemManager.rightside=!ItemManager.rightside	
+
 
 func _on_River_input_event(viewport, event, shape_idx):
 	if (event is InputEventMouseButton && event.pressed):
 		switch_position()
-
 
 func _on_Tween_tween_completed(object, key):
 	moving=false

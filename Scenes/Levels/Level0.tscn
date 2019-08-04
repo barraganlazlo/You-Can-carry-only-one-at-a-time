@@ -1,0 +1,249 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://Scenes/Boat.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/AnimatedWater.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Sprites/horizontal-flip.png" type="Texture" id=3]
+[ext_resource path="res://Scenes/AnimatedTree.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Sprites/Johans Wooden Fence.png" type="Texture" id=5]
+[ext_resource path="res://Scenes/SlotManager.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Slot.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Item.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Sprites/restart.png" type="Texture" id=9]
+[ext_resource path="res://Scripts/Reload.gd" type="Script" id=10]
+[ext_resource path="res://Sprites/quit.png" type="Texture" id=11]
+[ext_resource path="res://Scripts/MainMenu.gd" type="Script" id=12]
+[ext_resource path="res://Scenes/instruction.tscn" type="PackedScene" id=13]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 100, 60 )
+
+[sub_resource type="TileSet" id=2]
+1/name = "Johans Wooden Fence.png 1"
+1/texture = ExtResource( 5 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 192, 96, 32, 64 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shapes = [  ]
+1/z_index = 0
+
+[node name="Root" type="Node"]
+
+[node name="Main" type="Node2D" parent="."]
+position = Vector2( 640, 640 )
+z_index = -100
+
+[node name="Boat" parent="Main" instance=ExtResource( 1 )]
+position = Vector2( -154.516, -208 )
+timeToTravel = 1
+Xposition1 = 155
+Xposition2 = -155
+
+[node name="River" type="Area2D" parent="Main"]
+editor/display_folded = true
+position = Vector2( 0, -208 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Main/River"]
+shape = SubResource( 1 )
+
+[node name="AnimatedWater" parent="Main/River" instance=ExtResource( 2 )]
+position = Vector2( 170, -80.0001 )
+rotation = -3.14159
+frame = 5
+offset = Vector2( -20, -112 )
+
+[node name="AnimatedWater3" parent="Main/River" instance=ExtResource( 2 )]
+position = Vector2( 106, -80.0003 )
+rotation = -3.14159
+animation = "water2"
+frame = 1
+offset = Vector2( -20, -112 )
+
+[node name="AnimatedWater6" parent="Main/River" instance=ExtResource( 2 )]
+position = Vector2( 42.0003, -80.0005 )
+rotation = -3.14159
+animation = "water2"
+frame = 1
+offset = Vector2( -20, -112 )
+
+[node name="AnimatedWater8" parent="Main/River" instance=ExtResource( 2 )]
+position = Vector2( -21.9997, -80.0008 )
+rotation = -3.14159
+animation = "water2"
+frame = 1
+offset = Vector2( -20, -112 )
+
+[node name="AnimatedWater10" parent="Main/River" instance=ExtResource( 2 )]
+position = Vector2( -85.9998, -80.001 )
+rotation = -3.14159
+animation = "water2"
+frame = 1
+offset = Vector2( -20, -112 )
+
+[node name="AnimatedWater12" parent="Main/River" instance=ExtResource( 2 )]
+position = Vector2( -150, -80.0012 )
+rotation = -3.14159
+animation = "water2"
+frame = 12
+offset = Vector2( -20, -112 )
+
+[node name="AnimatedWater13" parent="Main/River" instance=ExtResource( 2 )]
+position = Vector2( -166, -80.0013 )
+rotation = -7.23998e-006
+scale = Vector2( 1, -1 )
+frame = 5
+offset = Vector2( -20, -112 )
+
+[node name="AnimatedWater2" parent="Main/River" instance=ExtResource( 2 )]
+position = Vector2( 170, -80.0001 )
+rotation = -3.14159
+animation = "water3"
+frame = 4
+offset = Vector2( -20, -48 )
+
+[node name="AnimatedWater4" parent="Main/River" instance=ExtResource( 2 )]
+position = Vector2( 106, -80.0003 )
+rotation = -3.14159
+animation = "water1"
+frame = 12
+offset = Vector2( -20, -48 )
+
+[node name="AnimatedWater5" parent="Main/River" instance=ExtResource( 2 )]
+position = Vector2( 42.0003, -80.0005 )
+rotation = -3.14159
+animation = "water1"
+frame = 12
+offset = Vector2( -20, -48 )
+
+[node name="AnimatedWater7" parent="Main/River" instance=ExtResource( 2 )]
+position = Vector2( -21.9997, -80.0008 )
+rotation = -3.14159
+animation = "water1"
+frame = 12
+offset = Vector2( -20, -48 )
+
+[node name="AnimatedWater9" parent="Main/River" instance=ExtResource( 2 )]
+position = Vector2( -85.9998, -80.001 )
+rotation = -3.14159
+animation = "water1"
+frame = 12
+offset = Vector2( -20, -48 )
+
+[node name="AnimatedWater11" parent="Main/River" instance=ExtResource( 2 )]
+position = Vector2( -150, -80.0012 )
+rotation = -3.14159
+animation = "water1"
+frame = 12
+offset = Vector2( -20, -48 )
+
+[node name="AnimatedWater14" parent="Main/River" instance=ExtResource( 2 )]
+position = Vector2( -166, -80.0013 )
+rotation = -7.23998e-006
+scale = Vector2( 1, -1 )
+animation = "water3"
+frame = 12
+offset = Vector2( -20, -48 )
+
+[node name="horizontal-flip" type="Sprite" parent="Main/River"]
+texture = ExtResource( 3 )
+
+[node name="Decoration" type="Node2D" parent="Main"]
+editor/display_folded = true
+
+[node name="Tree" parent="Main/Decoration" instance=ExtResource( 4 )]
+position = Vector2( 263.13, -130.127 )
+frame = 9
+
+[node name="Tree2" parent="Main/Decoration" instance=ExtResource( 4 )]
+position = Vector2( -96.8704, -43.2109 )
+frame = 8
+
+[node name="Tree3" parent="Main/Decoration" instance=ExtResource( 4 )]
+position = Vector2( -412.66, -122.759 )
+frame = 7
+
+[node name="Tree4" parent="Main/Decoration" instance=ExtResource( 4 )]
+position = Vector2( -316.871, -335.391 )
+frame = 7
+
+[node name="Tree5" parent="Main/Decoration" instance=ExtResource( 4 )]
+position = Vector2( 236.551, -396.022 )
+frame = 6
+
+[node name="TileMap" type="TileMap" parent="Main/Decoration"]
+tile_set = SubResource( 2 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( -1507328, 1, 0, -1441792, 1, 0, -1376256, 1, 0, -1310720, 1, 0, -1245184, 1, 0, -1179648, 1, 0, -1114112, 1, 0, -1048576, 1, 0, -983040, 1, 0, -917504, 1, 0, -851968, 1, 0, -786432, 1, 0, -720896, 1, 0, -655360, 1, 0, -327680, 1, 0, -262144, 1, 0, -196608, 1, 0, -131072, 1, 0, -65536, 1, 0, 0, 1, 0, 65536, 1, 0, 131072, 1, 0, 196608, 1, 0 )
+
+[node name="RightSlots" parent="Main" instance=ExtResource( 6 )]
+editor/display_folded = true
+position = Vector2( 260, -208 )
+rightside = true
+
+[node name="Slot" parent="Main/RightSlots" instance=ExtResource( 7 )]
+
+[node name="Sheep" parent="Main/RightSlots/Slot" instance=ExtResource( 8 )]
+
+[node name="Slot2" parent="Main/RightSlots" instance=ExtResource( 7 )]
+position = Vector2( 60, 0 )
+
+[node name="Wolf" parent="Main/RightSlots/Slot2" instance=ExtResource( 8 )]
+position = Vector2( -0.633362, 0 )
+type = 1
+
+[node name="Slot3" parent="Main/RightSlots" instance=ExtResource( 7 )]
+position = Vector2( 120, 0 )
+
+[node name="Laitue" parent="Main/RightSlots/Slot3" instance=ExtResource( 8 )]
+type = 2
+
+[node name="LeftSlots" parent="Main" instance=ExtResource( 6 )]
+editor/display_folded = true
+position = Vector2( -260, -208 )
+rightside = false
+
+[node name="Slot" parent="Main/LeftSlots" instance=ExtResource( 7 )]
+
+[node name="Slot2" parent="Main/LeftSlots" instance=ExtResource( 7 )]
+position = Vector2( -60, 0 )
+
+[node name="Slot3" parent="Main/LeftSlots" instance=ExtResource( 7 )]
+position = Vector2( -120, 0 )
+
+[node name="Reload" type="Button" parent="Main"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -600.0
+margin_top = -600.0
+margin_right = -520.0
+margin_bottom = -520.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_pivot_offset = Vector2( 40, 40 )
+icon = ExtResource( 9 )
+flat = true
+script = ExtResource( 10 )
+
+[node name="Button" type="Button" parent="Main"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 520.0
+margin_top = -600.0
+margin_right = 600.0
+margin_bottom = -520.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_pivot_offset = Vector2( 40, 40 )
+icon = ExtResource( 11 )
+flat = true
+script = ExtResource( 12 )
+
+[node name="instruction" parent="Main" instance=ExtResource( 13 )]
+[connection signal="input_event" from="Main/River" to="Main/Boat" method="_on_River_input_event"]
